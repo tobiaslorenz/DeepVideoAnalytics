@@ -74,11 +74,11 @@ RUN apt-get update && apt-get install -y \
     python-opencv
 RUN wget https://yt-dl.org/downloads/latest/youtube-dl -O /bin/youtube-dl
 RUN chmod a+rx /bin/youtube-dl
-RUN git clone https://github.com/akshayubhat/DeepVideoAnalytics /root/DVA
+RUN git clone https://github.com/tobiaslorenz/DeepVideoAnalytics /root/DVA
 RUN youtube-dl -U
 WORKDIR "/root/DVA/darknet"
 RUN make
-RUN wget https://www.dropbox.com/s/0zopjpswug5rjqy/yolo9000.weights
+RUN wget https://drive.google.com/open?id=0B0rkvDkvmYkmSjNCSWV0Y2gzTGs
 RUN dpkg -L python-opencv
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list
