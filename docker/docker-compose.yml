@@ -6,7 +6,7 @@
      volumes:
       - dvapgdata:/var/lib/postgresql/data
      environment:
-       - POSTGRES_USER=pgdbuser
+       - POSTGRES_USER=postgres
        - POSTGRES_PASSWORD=pgdbpass
    rabbit:
      image: rabbitmq
@@ -27,7 +27,7 @@
        - RABBIT_PASS=localpass
        - DB_HOST=db
        - DB_NAME=postgres
-       - DB_USER=pgdbuser
+       - DB_USER=postgres
        - DB_PASS=pgdbpass
      command: bash -c "youtube-dl -U && git pull && fab start_server_container:1"
      ports:
