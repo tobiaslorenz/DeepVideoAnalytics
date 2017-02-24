@@ -78,7 +78,7 @@ RUN git clone https://github.com/tobiaslorenz/DeepVideoAnalytics /root/DVA
 RUN youtube-dl -U
 WORKDIR "/root/DVA/darknet"
 RUN make
-RUN wget https://drive.google.com/open?id=0B0rkvDkvmYkmSjNCSWV0Y2gzTGs
+RUN wget "https://drive.google.com/uc?export=download&id=0B0rkvDkvmYkmSjNCSWV0Y2gzTGs"
 RUN dpkg -L python-opencv
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list
