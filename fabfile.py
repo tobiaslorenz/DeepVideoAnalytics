@@ -93,7 +93,7 @@ def clean():
 @task
 def ci():
     with lcd("tests"):
-        #local('wget https://www.dropbox.com/s/xtpkb18i6hn39ht/Goldeneye.mp4')
+        local('wget https://drive.google.com/open?id=0B0rkvDkvmYkmdWxFUnduWWpyMzA')
         #local('wget https://www.dropbox.com/s/cjo9b68poqk7gy2/TomorrowNeverDies.mp4')
         #local('wget https://www.dropbox.com/s/xwbk5g1qit5s9em/WorldIsNotEnough.mp4')
         #local('wget https://www.dropbox.com/s/misaejsbz6722pd/test.png')
